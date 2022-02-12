@@ -1,0 +1,310 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.3;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.17)), to(rgba(206, 151, 151, 0.17)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.17), rgba(206, 151, 151, 0.17));
+}
+
+@media (min-width: 650px) {
+  main {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.17), rgba(206, 151, 151, 0.17));
+  }
+}
+
+main .bg {
+  position: absolute;
+}
+
+@media (min-width: 650px) {
+  main .bg {
+    width: 57.57%;
+    min-height: 100%;
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+}
+
+main .grid-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 22.65vw 67.142vw auto;
+      grid-template-rows: 22.65vw 67.142vw auto;
+}
+
+@media (min-width: 650px) {
+  main .grid-container {
+    -ms-grid-columns: auto 42.431%;
+        grid-template-columns: auto 42.431%;
+    -ms-grid-rows: 16.32vw auto;
+        grid-template-rows: 16.32vw auto;
+  }
+}
+
+main .grid-container .grid-logo {
+  padding: 8.26%;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-logo {
+    padding: 7.6% 0 0 19.663%;
+  }
+}
+
+main .grid-container .grid-logo > img {
+  height: 6.13vw;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-logo > img {
+    height: 2.431vw;
+  }
+}
+
+main .grid-container .grid-bg {
+  background-image: url("/images/hero-mobile.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-bg {
+    background-position: center bottom;
+    background-size: cover;
+    background-image: url("/images/hero-desktop.jpg");
+    grid-row: span 2;
+  }
+}
+
+main .grid-container .grid-text {
+  padding: 18% 8.26% 25% 8.26%;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-text {
+    padding: 0 26.418% 0 19.663%;
+  }
+}
+
+main .grid-container .grid-text > h1 {
+  font-size: 13vw;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  line-height: 1.1;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-text > h1 {
+    font-size: 5.412vw;
+    text-align: left;
+  }
+}
+
+main .grid-container .grid-text > h1 > span {
+  color: #ce9797;
+  font-weight: 300;
+}
+
+main .grid-container .grid-text > p {
+  margin: 9.6% 0 13% 0;
+  color: #ce9797;
+  font-size: 3.96vw;
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-text > p {
+    font-size: 1.16vw;
+    margin: 43px 0 49px 0;
+    text-align: left;
+  }
+}
+
+main .grid-container .grid-text > form {
+  position: relative;
+}
+
+main .grid-container .grid-text > form > input {
+  width: 100%;
+  height: 13.056vw;
+  background: transparent;
+  border: 1px solid #ce9797;
+  color: black;
+  border-radius: 7.995vw;
+  font-size: 3.5vw;
+  padding: 5.43% 26vw 5.43% 8%;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-text > form > input {
+    padding: 4.475% 10vw 4.475% 7.383%;
+    font-size: 1.112vw;
+    margin-bottom: 35.795%;
+    height: 4.167vw;
+    border-radius: 2.084vw;
+  }
+}
+
+main .grid-container .grid-text > form > input:focus {
+  outline: 2px solid #ce9797;
+}
+
+main .grid-container .grid-text > form > input.active:focus {
+  outline: 2px solid #f96262;
+}
+
+main .grid-container .grid-text > form > input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+main .grid-container .grid-text > form > input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+main .grid-container .grid-text > form > input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+main .grid-container .grid-text > form > input::placeholder {
+  color: #ce9797;
+}
+
+main .grid-container .grid-text > form .submit-button {
+  position: absolute;
+  width: 24%;
+  height: 14.2vw;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  top: -0.5vw;
+  right: -0.3vw;
+  border-radius: 7.995vw;
+  -webkit-box-shadow: 5px 15px 40px #ce9797;
+          box-shadow: 5px 15px 40px #ce9797;
+}
+
+main .grid-container .grid-text > form .submit-button:hover {
+  background: rgba(238, 140, 140, 0.4);
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-text > form .submit-button {
+    width: 23%;
+    height: 4.6vw;
+    border-radius: 2.084vw;
+    right: -0.2vw;
+    top: -0.3vw;
+  }
+}
+
+main .grid-container .grid-text > form .submit-button > button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+main .grid-container .grid-text > form .submit-button > img {
+  width: 3vw;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-text > form .submit-button > img {
+    width: 0.834vw;
+  }
+}
+
+main .grid-container .grid-text > form .error {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
+main .grid-container .grid-text > form .error > p {
+  position: relative;
+  color: #f96262;
+  font-size: 3.3vw;
+  top: 14vw;
+  left: 6.8vw;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-text > form .error > p {
+    top: 4.7vw;
+    left: 2.36vw;
+    font-size: 1vw;
+  }
+}
+
+main .grid-container .grid-text > form .error > img {
+  position: relative;
+  width: 12%;
+  left: 59vw;
+}
+
+@media (min-width: 650px) {
+  main .grid-container .grid-text > form .error > img {
+    left: 21.5vw;
+    width: 12%;
+  }
+}
+
+main .grid-container .grid-text > form .error-active {
+  visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,201 @@
+main {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(hsl(0, 0%, 100%), 0.17),
+    rgba($DesaturatedRed, 0.17)
+  );
+  @media (min-width: 650px) {
+    background: linear-gradient(
+      135deg,
+      rgba(hsl(0, 0%, 100%), 0.17),
+      rgba($DesaturatedRed, 0.17)
+    );
+  }
+  .bg {
+    position: absolute;
+    @media (min-width: 650px) {
+      width: 57.57%;
+      min-height: 100%;
+      background-image: url("/images/bg-pattern-desktop.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+  }
+
+  .grid-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 22.65vw 67.142vw auto;
+    @media (min-width: 650px) {
+      grid-template-columns: auto 42.431%;
+      grid-template-rows: 16.32vw auto;
+    }
+    .grid-logo {
+      padding: 8.26%;
+      @media (min-width: 650px) {
+        padding: 7.6% 0 0 19.663%;
+      }
+      > img {
+        height: 6.13vw;
+        @media (min-width: 650px) {
+          height: 2.431vw;
+        }
+      }
+    }
+    .grid-bg {
+      background-image: url("/images/hero-mobile.jpg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @media (min-width: 650px) {
+        background-position: center bottom;
+        background-size: cover;
+        background-image: url("/images/hero-desktop.jpg");
+        grid-row: span 2;
+      }
+    }
+    .grid-text {
+      padding: 18% 8.26% 25% 8.26%;
+      @media (min-width: 650px) {
+        padding: 0 26.418% 0 19.663%;
+      }
+      > h1 {
+        font-size: 13vw;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1vw;
+        line-height: 1.1;
+        @media (min-width: 650px) {
+          font-size: 5.412vw;
+          text-align: left;
+        }
+        > span {
+          color: $DesaturatedRed;
+          font-weight: 300;
+        }
+      }
+
+      > p {
+        margin: 9.6% 0 13% 0;
+        color: $DesaturatedRed;
+        font-size: 3.96vw;
+        text-align: center;
+        @media (min-width: 650px) {
+          font-size: 1.16vw;
+          margin: 43px 0 49px 0;
+          text-align: left;
+        }
+      }
+
+      > form {
+        position: relative;
+        > input {
+          width: 100%;
+          height: 13.056vw;
+          background: transparent;
+          border: 1px solid $DesaturatedRed;
+          color: black;
+          border-radius: 7.995vw;
+          font-size: 3.5vw;
+          padding: 5.43% 26vw 5.43% 8%;
+          @media (min-width: 650px) {
+            padding: 4.475% 10vw 4.475% 7.383%;
+            font-size: 1.112vw;
+            margin-bottom: 35.795%;
+            height: 4.167vw;
+            border-radius: 2.084vw;
+          }
+          &:focus {
+            outline: 2px solid $DesaturatedRed;
+          }
+          &.active:focus {
+            outline: 2px solid $SoftRed;
+          }
+          &::placeholder {
+            color: $DesaturatedRed;
+          }
+        }
+
+        .submit-button {
+          position: absolute;
+          width: 24%;
+          height: 14.2vw;
+          transition: 0.1s;
+          background: linear-gradient(
+            135deg,
+            rgba(hsl(0, 80%, 86%), 1),
+            rgba(hsl(0, 74%, 74%), 1)
+          );
+          top: -0.5vw;
+          right: -0.3vw;
+          border-radius: 7.995vw;
+          box-shadow: 5px 15px 40px $DesaturatedRed;
+          &:hover {
+            background: rgba($color: hsl(0, 74%, 74%), $alpha: 0.4);
+          }
+          @media (min-width: 650px) {
+            width: 23%;
+            height: 4.6vw;
+            border-radius: 2.084vw;
+            right: -0.2vw;
+            top: -0.3vw;
+          }
+          > button {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+          }
+
+          > img {
+            width: 3vw;
+            @media (min-width: 650px) {
+              width: 0.834vw;
+            }
+          }
+        }
+
+        .error {
+          position: absolute;
+          top: 0;
+          z-index: -1;
+          visibility: hidden;
+          > p {
+            position: relative;
+            color: $SoftRed;
+            font-size: 3.3vw;
+            top: 14vw;
+            left: 6.8vw;
+            @media (min-width: 650px) {
+              top: 4.7vw;
+              left: 2.36vw;
+              font-size: 1vw;
+            }
+          }
+          > img {
+            position: relative;
+            width: 12%;
+            left: 59vw;
+            @media (min-width: 650px) {
+              left: 21.5vw;
+              width: 12%;
+            }
+          }
+        }
+        .error-active {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
